@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: radial-gradient(circle, #ff9a9e, #fad0c4, #fad0c4, #a18cd1, #fbc2eb);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            background-color: rgba(248, 240, 251, 0.884);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+            width: calc(100% - 20px); 
+            padding: 10px; 
+            margin-bottom: 10px; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="takevalue()">
+        <h1>Registration Form</h1>
+        <input type="text" name="Name" placeholder="Your Name" id="name"><br>
+        <input type="email" name="Email" placeholder="Your Email" id="email"><br> 
+        <input type="number" name="Mobile" placeholder="Your Mobile Number" id="mobile"><br>
+        <input type="password" name="password" placeholder="Password" id="password"><br>
+        <input type="submit" value="SignUp">
+    </form>
+    <script>
+        function takevalue() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value; 
+            var mobile = document.getElementById("mobile").value;
+            var password = document.getElementById("password").value;
+            document.write("Name =" + name + "<br>");
+            document.write("Email =" + email + "<br>"); 
+            document.write("Mobile Number =" + mobile + "<br>");
+            document.write("Password =" + password + "<br>");
+        }
+    </script>
+</body>
+</html>
